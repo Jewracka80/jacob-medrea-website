@@ -27,16 +27,93 @@
 }
 
 }
+
+/* Socials-Dropdown in der Navigation */
+.socials-menu {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.socials-menu summary {
+  display: inline-block;
+  cursor: pointer;
+  list-style: none;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+.socials-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.socials-menu summary span {
+  font-size: 0.75em;
+  margin-left: 3px;
+}
+
+.socials-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 155px;
+  padding: 8px;
+  background: #171717;
+  border: 1px solid #555;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+.socials-dropdown a {
+  display: block;
+  padding: 10px 12px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 6px;
+}
+
+.socials-dropdown a:hover,
+.socials-dropdown a:focus-visible {
+  background: #383838;
+}
+
+@media (max-width: 600px) {
+  .socials-dropdown {
+    left: auto;
+    right: 0;
+  }
+}
 </style></head><body><header><strong>JACOB MEDREA</strong>
+
 
 <nav>
   <a href="#music">Music</a>
+
+  <details class="socials-menu">
+    <summary>Socials <span aria-hidden="true">▾</span></summary>
+    <div class="socials-dropdown">
+      <a href="https://www.instagram.com/medreamusic/"
+         target="_blank" rel="noopener noreferrer">Instagram</a>
+
+      <a href="https://www.youtube.com/@JacobMedrea"
+         target="_blank" rel="noopener noreferrer">YouTube</a>
+
+      <a href="https://www.tiktok.com/@medreamusic"
+         target="_blank" rel="noopener noreferrer">TikTok</a>
+    </div>
+  </details>
+
   <a href="#live">Live Shows</a>
   <a href="#booking">Booking</a>
   <a href="#merch">Merch</a>
   <a href="#epk">EPK</a>
+
   <button id="lang" style="vertical-align:middle; transform:translateY(-4px);">EN</button>
 </nav>
+
 
 </header><section class="hero"><div><p style="transform:translateY(-80px);position:relative;" data-de="Live Looping · Musik · Performance" data-en="Live Looping · Music · Performance">Live Looping · Musik · Performance</p><h1>Jacob<br>Medrea.</h1></div></section>
 <section id="music" class="wrap">
