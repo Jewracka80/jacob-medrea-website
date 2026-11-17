@@ -25,16 +25,21 @@ nav .socials-menu summary{
 }
 
 nav::before{
-  content:"";
-  flex-basis:100%;
-  order:1;
+  display:none;
 }
 
+
 nav #lang{
-  order:2;
+  order:0;
   display:block;
   margin-left:auto;
+  padding:6px 8px;
 }
+
+nav .epk-nav{
+  display:none;
+}
+
 
 
 
@@ -161,7 +166,7 @@ nav #lang{
   <a href="#live">Live Shows</a>
   <a href="#booking">Booking</a>
   <a href="#merch">Merch</a>
-  <a href="#epk">EPK</a>
+  <a href="#epk" class="epk-nav">EPK</a>
 
   <button id="lang">EN</button>
 </nav>
