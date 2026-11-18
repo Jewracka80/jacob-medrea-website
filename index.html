@@ -8,40 +8,61 @@
 
 
 
+
 #live{
+  background:#efefeb;
+  color:#111;
+  box-shadow:0 0 0 100vmax #efefeb;
+  clip-path:inset(0 -100vmax);
+}
+  
+.live-banner{
   position:relative;
-  isolation:isolate;
-  background:#171717;
-  color:#fff;
-  box-shadow:none;
-  clip-path:none;
-  max-width:none;
-  width:100vw;
-  margin-left:calc(50% - 50vw);
-  box-sizing:border-box;
+  margin-top:24px;
+  overflow:hidden;
 }
 
+.live-banner img{
+  display:block;
+  width:100%;
+  height:auto;
+}
 
-
-
-
-#live::before{
-  content:"";
+.live-banner-text{
   position:absolute;
-  inset:0;
-  z-index:-1;
-  background-image:url("Jacob%20Medrea%20III.jpg");
-  background-position:center;
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-color:#171717;
-}
-
-
-
-#live h2{
+  left:6%;
+  top:50%;
+  transform:translateY(-50%);
+  width:58%;
   color:#fff;
+  text-shadow:0 2px 18px rgba(0,0,0,.85);
 }
+
+.live-banner-text h2{
+  color:#fff;
+  font-size:clamp(24px,5vw,64px);
+  line-height:1;
+  margin:0 0 16px;
+}
+
+.live-banner-text p{
+  font-size:clamp(12px,1.8vw,20px);
+  line-height:1.4;
+  margin:0;
+}
+
+@media(max-width:720px){
+  .live-banner-text{
+    width:65%;
+  }
+
+  .live-banner-text h2{
+    font-size:clamp(20px,5vw,36px);
+    margin-bottom:8px;
+  }
+}
+
+
 
 
 #live{
@@ -300,25 +321,29 @@ nav .epk-nav{
 
 
 
+
 <section id="live" class="wrap light" style="padding-top:20px;padding-bottom:80px;">
-
-
 
   <div class="eyebrow">02 / LIVE SHOWS</div>
 
-  
+  <div class="live-banner">
+    <img
+      src="Jacob%20Medrea%20III.jpg"
+      alt="Jacob Medrea live am Schlagzeug mit tanzendem Publikum"
+    >
 
-<h2
-  data-de="Erlebe Jacob live."
-  data-en="Experience Jacob Live."
->Erlebe Jacob live.</h2>
+    <div class="live-banner-text">
+      <h2
+        data-de="Erlebe Jacob live."
+        data-en="Experience Jacob Live."
+      >Erlebe Jacob live.</h2>
 
-
-
-  <p
-    data-de="Saxophon. Beats. Loops. Pure Live-Energie."
-    data-en="Saxophone. Beats. Loops. Pure live energy."
-  >Saxophon. Beats. Loops. Pure Live-Energie.</p>
+      <p
+        data-de="Saxophon. Beats. Loops. Pure Live-Energie."
+        data-en="Saxophone. Beats. Loops. Pure live energy."
+      >Saxophon. Beats. Loops. Pure Live-Energie.</p>
+    </div>
+  </div>
 
   <div style="
     margin-top:36px;
@@ -341,6 +366,7 @@ nav .epk-nav{
   </div>
 
 </section>
+
 
 
 
