@@ -321,12 +321,28 @@ nav .epk-nav{
     line-height: 1.3 !important;
   }
 }
-  
+@media (max-width: 720px) {
+  nav {
+    display: flex;
+  }
+
+  nav .socials-menu {
+    order: 99;
+  }
+
+  nav #lang {
+    order: 98;
+  }
+}
 </style></head><body><header><strong>JACOB MEDREA</strong>
 
 
 <nav>
   <a href="#music">Music</a>
+  <a href="#live">Live Shows</a>
+  <a href="#booking">Booking</a>
+  <a href="#merch">Merch</a>
+  <a href="#newsletter">Newsletter</a>
 
   <details class="socials-menu">
     <summary>Socials <span aria-hidden="true">▾</span></summary>
@@ -342,10 +358,6 @@ nav .epk-nav{
     </div>
   </details>
 
-  <a href="#live">Live Shows</a>
-  <a href="#booking">Booking</a>
-  <a href="#merch">Merch</a>
-  <a href="#newsletter">Newsletter</a>
   <a href="#epk" class="epk-nav">EPK</a>
 
   <button id="lang">EN</button>
@@ -563,7 +575,14 @@ nav .epk-nav{
         style="display:block;width:100%;height:clamp(350px,55vw,650px);object-fit:cover;object-position:center top;"
 >
 
-      <div class="newsletter-banner-text">
+      <div class="newsletter-banner-text" style="
+  position:absolute;
+  left:60%;
+  top:45%;
+  transform:translateY(-50%);
+  width:36%;
+  z-index:2;
+">
   <h2>Stay in the Loop.</h2>
 
   <p
