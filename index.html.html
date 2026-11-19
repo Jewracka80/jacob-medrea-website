@@ -1,0 +1,631 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jacob Medrea — Live Looping</title><style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#000;color:#f6f6f6;font:16px/1.55 Arial,Helvetica,sans-serif}a{color:inherit}header{position:absolute;z-index:3;top:0;left:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:24px clamp(20px,5vw,72px);gap:15px}header strong{font-size:20px}nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}nav a{text-decoration:none;font-size:14px}button{background:transparent;border:1px solid #fff;color:#fff;padding:8px 12px;cursor:pointer}.hero{min-height:100svh;position:relative;display:flex;align-items:end;padding:0 clamp(20px,5vw,72px) 10vh;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 65%),url('Jacob_Medrea_TEDx.jpg') center 35%/cover no-repeat}.hero h1{font-size:clamp(42px,6vw,90px);line-height:.95;letter-spacing:-.045em;margin:0;font-weight:700;text-align:left;max-width:380px;transform:translateY(-80px)}.hero p{letter-spacing:.16em;text-transform:uppercase;font-size:12px}.wrap{max-width:1150px;margin:auto;padding:100px 24px}.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#bbb}h2{font-size:clamp(40px,7vw,84px);letter-spacing:-.055em;line-height:1.05;margin:16px 0 30px}.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.two img,.wide-img{width:100%;height:auto;display:block;filter:none}.light{background:#000;color:#fff}
+
+
+
+
+#live{
+  background:#000;
+  color:#fff;
+}
+  
+
+.live-banner{
+  position:relative;
+  margin:24px 0 32px;
+  overflow:hidden;
+  border-radius:12px;
+}
+
+
+.live-banner img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.live-banner-text{
+  position:absolute;
+  left:6%;
+  top:50%;
+  transform:translateY(-50%);
+  width:58%;
+  color:#fff;
+  text-shadow:0 2px 18px rgba(0,0,0,.85);
+}
+
+.live-banner-text h2{
+  color:#fff;
+  font-size:clamp(24px,5vw,64px);
+  line-height:1;
+  margin:0 0 16px;
+}
+
+.live-banner-text p{
+  font-size:clamp(12px,1.8vw,20px);
+  line-height:1.4;
+  margin:0;
+}
+
+@media(max-width:720px){
+  .live-banner-text{
+    width:65%;
+  }
+
+  .live-banner-text h2{
+    font-size:clamp(20px,5vw,36px);
+    margin-bottom:8px;
+  }
+}
+
+
+
+
+/* Alter heller Live-Shows-Schatten entfernt: Hintergrund bleibt schwarz. */
+ .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.video-card{display:block;text-decoration:none}.video-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;filter:saturate(.88);transition:filter .2s,transform .2s}.video-card:hover img{filter:saturate(1.1)}.thumb{position:relative;overflow:hidden;background:#222}.play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.75);font-size:25px}.video-card h3{font-size:20px;margin:12px 0 2px}.video-card p{margin:0;color:#aaa;font-size:14px}.hero{background-position:center 55%}.hero h1{text-shadow:0 3px 30px rgba(0,0,0,.5)}.eyebrow{color:#bba29a}.light .eyebrow{color:#7d3b34}@media(max-width:720px){.video-grid{grid-template-columns:1fr}.hero{background-position:46% center}}.link{display:inline-block;border-bottom:1px solid currentColor;padding:10px 0;text-decoration:none}footer{padding:35px 24px;border-top:1px solid #555;font-size:13px;color:#aaa}.placeholder{border:1px solid #777;padding:20px;color:#aaa} 
+@media(max-width:720px){
+  
+header{padding:16px;align-items:center}
+header strong{display:none}
+
+nav{
+  justify-content:flex-start;
+  gap:12px;
+  width:100%;
+}
+
+nav a{
+  font-size:12px;
+}
+
+nav .socials-menu summary{
+  font-size:12px !important;
+}
+
+nav::before{
+  display:none;
+}
+
+
+nav #lang{
+  order:0;
+  display:block;
+  margin-left:auto;
+  padding:6px 8px;
+}
+
+nav .epk-nav{
+  display:none;
+}
+  #epk{
+  display:none;
+}
+
+
+
+
+.socials-menu summary{font-size:12px}
+.hero{background-image:linear-gradient(0deg,rgba(0,0,0,.8),transparent 70%),url('Jacob_Medrea_TEDx.jpg');background-position:center}.hero h1{font-size:clamp(56px,14vw,92px)}.two{grid-template-columns:1fr}.wrap{padding:70px 20px}}
+
+@media (max-width: 600px) {
+  
+.hero h1 {
+    font-size: clamp(30px, 8vw, 48px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    width: 175px;
+    max-width: none;
+    margin: 0;
+    position: relative;
+    left: 55vw;
+    transform: translateY(-125px);
+}
+
+.hero p {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    width: 175px;
+    max-width: none;
+    margin: 0;
+    position: relative;
+    left: 55vw;
+    transform: translateY(-125px) !important;
+}
+
+}
+
+/* Socials-Dropdown in der Navigation */
+
+.socials-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+.socials-menu summary {
+  display: block;
+  cursor: pointer;
+  list-style: none;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+
+
+
+
+.socials-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.socials-menu summary span {
+  font-size: 0.75em;
+  margin-left: 3px;
+}
+
+.socials-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 155px;
+  padding: 8px;
+  background: #171717;
+  border: 1px solid #555;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+.socials-dropdown a {
+  display: block;
+  padding: 10px 12px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: 6px;
+}
+
+.socials-dropdown a:hover,
+.socials-dropdown a:focus-visible {
+  background: #383838;
+}
+
+@media (max-width: 600px) {
+  
+.socials-dropdown{
+  left:0;
+  right:auto;
+}
+
+}
+</style></head><body><header><strong>JACOB MEDREA</strong>
+
+
+<nav>
+  <a href="#music">Music</a>
+
+  <details class="socials-menu">
+    <summary>Socials <span aria-hidden="true">▾</span></summary>
+    <div class="socials-dropdown">
+      <a href="https://www.instagram.com/medreamusic/"
+         target="_blank" rel="noopener noreferrer">Instagram</a>
+
+      <a href="https://www.youtube.com/@JacobMedrea"
+         target="_blank" rel="noopener noreferrer">YouTube</a>
+
+      <a href="https://www.tiktok.com/@medreamusic"
+         target="_blank" rel="noopener noreferrer">TikTok</a>
+    </div>
+  </details>
+
+  <a href="#live">Live Shows</a>
+  <a href="#booking">Booking</a>
+  <a href="#merch">Merch</a>
+  <a href="#newsletter">Newsletter</a>
+  <a href="#epk" class="epk-nav">EPK</a>
+
+  <button id="lang">EN</button>
+</nav>
+
+
+</header><section class="hero"><div><p style="transform:translateY(-80px);position:relative;" data-de="Live Looping · Musik · Performance" data-en="Live Looping · Music · Performance">Live Looping · Musik · Performance</p><h1>Jacob<br>Medrea.</h1></div></section>
+<section id="music" class="wrap">
+  <div class="eyebrow">01 / Music</div>
+
+  <h2
+    data-de="Alles entsteht live."
+    data-en="Created live, in the moment."
+  >Alles entsteht live.</h2>
+<div style="max-width:850px;margin:28px 0 36px;">
+
+  <h3
+    data-de="Ein Künstler. Unendliche Möglichkeiten."
+    data-en="One Artist. Endless Possibilities."
+  >Ein Künstler. Unendliche Möglichkeiten.</h3>
+
+  <p
+    data-de="Von TEDx Cluj für seine herausragende Performance gewürdigt, ist Jacob Medrea eine One-Man-Show im wahrsten Sinne des Wortes."
+    data-en="Recognized by TEDx Cluj for his outstanding performance, Jacob Medrea is a one-man show in the truest sense."
+  >Von TEDx Cluj für seine herausragende Performance gewürdigt, ist Jacob Medrea eine One-Man-Show im wahrsten Sinne des Wortes.</p>
+
+  <p
+    data-de="Mit Saxophon, Beatboxing, Schlagzeug, Gesang, Keyboard und Loop-Station erschafft er mitreißende Grooves, überraschende musikalische Wendungen und eine Energie, die das Publikum in Bewegung bringt."
+    data-en="Combining saxophone, beatboxing, drums, vocals, keyboard, and a loop station, he creates infectious grooves, unexpected musical twists, and an irresistible energy that gets audiences moving."
+  >Mit Saxophon, Beatboxing, Schlagzeug, Gesang, Keyboard und Loop-Station erschafft er mitreißende Grooves, überraschende musikalische Wendungen und eine Energie, die das Publikum in Bewegung bringt.</p>
+
+  <p
+    data-de="Dabei lässt er die Grenzen zwischen Live-Konzert, DJ-Set und improvisierter Comedy verschwimmen. Jede Performance wird zu einem spontanen, energiegeladenen Erlebnis. Keine Show gleicht der anderen – und das Publikum wird selbst Teil des Geschehens."
+    data-en="Blurring the lines between live concert, DJ set, and improvisational comedy, Jacob turns every performance into a spontaneous, high-energy experience. No two shows are ever the same — and the audience is always part of the adventure."
+  >Dabei lässt er die Grenzen zwischen Live-Konzert, DJ-Set und improvisierter Comedy verschwimmen. Jede Performance wird zu einem spontanen, energiegeladenen Erlebnis. Keine Show gleicht der anderen – und das Publikum wird selbst Teil des Geschehens.</p>
+
+</div>
+
+
+  <div class="video-grid">
+
+    <div class="video-card">
+      <div style="width:100%;aspect-ratio:16/9;">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/Bs1fFjzC6A4"
+          title="Jacob Medrea – Performance 1"
+          loading="lazy"
+          style="display:block;width:100%;height:100%;border:0;border-radius:10px;"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h3
+        data-de="Performance ansehen"
+        data-en="Watch performance"
+      >Performance ansehen</h3>
+      <p>YouTube · Video 1</p>
+    </div>
+
+    <div class="video-card">
+      <div style="width:100%;aspect-ratio:16/9;">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/oJsBa2pIss8"
+          title="Jacob Medrea – Performance 2"
+          loading="lazy"
+          style="display:block;width:100%;height:100%;border:0;border-radius:10px;"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h3
+        data-de="Performance ansehen"
+        data-en="Watch performance"
+      >Performance ansehen</h3>
+      <p>YouTube · Video 2</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<section id="live" class="wrap light" style="padding-top:20px;padding-bottom:80px;">
+
+  <div class="eyebrow">02 / LIVE SHOWS</div>
+
+  <div class="live-banner">
+    <img
+      src="Jacob%20Medrea%20III.jpg"
+      alt="Jacob Medrea live am Schlagzeug mit tanzendem Publikum"
+    >
+
+    <div class="live-banner-text">
+      <h2
+        data-de="Erlebe Jacob live."
+        data-en="Experience Jacob Live."
+      >Erlebe Jacob live.</h2>
+
+      <p
+        data-de="Saxophon. Beats. Loops. Pure Live-Energie."
+        data-en="Saxophone. Beats. Loops. Pure live energy."
+      >Saxophon. Beats. Loops. Pure Live-Energie.</p>
+    </div>
+  </div>
+
+  <div style="
+    margin-top:36px;
+    padding:32px;
+    border:1px solid #888;
+    border-radius:12px;
+    text-align:center;
+  ">
+
+    <h3
+      data-de="Neue Termine folgen."
+      data-en="New dates coming soon."
+    >Neue Termine folgen.</h3>
+
+    <p
+      data-de="Hier findest du bald Jacobs kommende Live-Auftritte."
+      data-en="Check back soon for Jacob's upcoming live shows."
+    >Hier findest du bald Jacobs kommende Live-Auftritte.</p>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<section id="booking" class="wrap">
+ 
+<img
+  src="jacob-booking-banner.jpg"
+  alt="Jacob Medrea mit roter Sonnenbrille und Keyboard"
+  style="display:block;width:100%;height:auto;margin-bottom:32px;border-radius:12px;"
+>
+
+  <div>
+<div class="eyebrow">03 / Booking</div><h2 data-de="Live erleben." data-en="Experience it live.">Live erleben.</h2><p data-de="Für Festivals, Clubs, Kulturveranstaltungen und besondere Events." data-en="For festivals, clubs, cultural events and special occasions.">Für Festivals, Clubs, Kulturveranstaltungen und besondere Events.</p>
+<form action="https://formspree.io/f/mjywbkno" method="POST">
+  <div class="booking-fields" style="display:flex;flex-direction:column;gap:18px;width:100%;max-width:650px;">
+
+    <label for="first_name" data-de="Vorname *" data-en="First Name *">Vorname *</label>
+    <input id="first_name" type="text" name="first_name" required>
+
+    <label for="last_name" data-de="Nachname *" data-en="Last Name *">Nachname *</label>
+    <input id="last_name" type="text" name="last_name" required>
+
+    <label for="email" data-de="E-Mail-Adresse *" data-en="Email Address *">E-Mail-Adresse *</label>
+    <input id="email" type="email" name="email" required>
+
+    <label for="location" data-de="Veranstaltungsort *" data-en="Event Location *">Veranstaltungsort *</label>
+    <input id="location" type="text" name="location" required>
+
+    <label for="subject" data-de="Betreff *" data-en="Subject *">Betreff *</label>
+    <input id="subject" type="text" name="subject" required>
+
+    <label for="message" data-de="Nachricht *" data-en="Message *">Nachricht *</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit" data-de="Anfrage senden" data-en="Send Inquiry">Anfrage senden</button>
+  </div>
+</form>
+
+<style>
+  .booking-fields label {
+    display:block;
+    margin-bottom:-10px;
+    font-family:Arial,sans-serif;
+    font-size:14px;
+  }
+  .booking-fields input,
+  .booking-fields textarea {
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:14px;
+    font-family:Arial,sans-serif;
+    font-size:16px;
+    background:#fff;
+    color:#222;
+    border:1px solid #bbb;
+    border-radius:0;
+  }
+  .booking-fields button {
+    width:100%;
+    padding:16px;
+    cursor:pointer;
+  }
+</style>
+</div></section>  
+
+<!-- STAY IN THE LOOP -->
+
+<!-- NEWSLETTER -->
+<section id="newsletter" style="background:#000;color:#fff;box-shadow:0 0 0 100vmax #000;clip-path:inset(0 -100vmax);padding:40px 0 70px;">
+
+  <div class="wrap">
+
+    <!-- BANNER: gleiche Breite wie Wear the Music -->
+    <div style="position:relative;width:100%;margin:24px 0 32px;overflow:hidden;border-radius:12px;">
+
+      <img
+        src="Jacob%20FB%20I.jpg"
+        alt="Jacob Medrea bei einer Live-Performance"
+        style="display:block;width:100%;height:clamp(350px,55vw,650px);object-fit:cover;object-position:center top;"
+>
+
+      <div style="
+        position:absolute;
+        left:6%;
+        top:50%;
+        transform:translateY(-50%);
+        width:75%;
+        color:#fff;
+        text-shadow:0 2px 18px rgba(0,0,0,.9);
+      ">
+        <h2 style="font-size:clamp(24px,5vw,64px);line-height:1;margin:0 0 12px;">
+          Stay in the Loop.
+        </h2>
+
+        <p
+          data-de="Neue Musik. Live-Shows. Updates."
+          data-en="New music. Live shows. Updates."
+          style="font-size:clamp(12px,1.8vw,20px);line-height:1.4;margin:0;"
+        >Neue Musik. Live-Shows. Updates.</p>
+      </div>
+
+    </div>
+
+    <!-- BREITE ANMELDEBOX -->
+    <div style="
+      width:100%;
+      box-sizing:border-box;
+      background:#fff;
+      border:1px solid #bbb;
+      border-radius:12px;
+      padding:24px 16px;
+      margin:0 auto;
+      overflow:hidden;
+    ">
+
+      <iframe
+        title="Jacob Medrea Newsletter-Anmeldung"
+        width="100%"
+        height="500"
+        src="https://258c175c.sibforms.com/v2/serve/MUIFACFsWIbqzsFP7Epg3VIY1B4957-fWKnX2vHDB7EKf0wG_FZWwne_aB8uqpG6n8Q5CMh90KSb9g8wLRJM6yVl7tSCzdj08sKkTVc9oXi2LPxFws-C6Nl3d1SQBkwPNiaBaH_eCxqjOe-NTBN0XisJMnZ_DnL_G5JFnJYHs9KNl3atEHJWJ87iBu0rjC2USlN2vRnXGEth9Kafug=="
+        frameborder="0"
+        scrolling="no"
+        style="display:block;width:100%;border:0;"
+      ></iframe>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section id="merch" class="light">
+  <div class="wrap">
+    
+<div class="eyebrow">MERCH</div>
+
+<div style="position:relative;width:100%;margin:24px 0 32px;overflow:hidden;border-radius:12px;">
+
+  <img
+    src="jacob-about-banner.jpg"
+    alt="Jacob Medrea mit blauer Mütze"
+    style="display:block;width:100%;height:auto;"
+  >
+
+  <div style="
+    position:absolute;
+    left:6%;
+    top:50%;
+    transform:translateY(-50%);
+    width:62%;
+    color:#10213b;
+    font-size:clamp(22px,5.5vw,76px);
+    font-weight:900;
+    line-height:1;
+    letter-spacing:-0.05em;
+  ">Wear the Music.</div>
+
+</div>
+
+
+    <p
+      data-de="Vier Designs. Jede Menge Energie. Der Merch-Drop kommt bald!"
+      data-en="Four designs. Loads of energy. The merch drop is coming soon!"
+    >Vier Designs. Jede Menge Energie. Der Merch-Drop kommt bald!</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;margin-top:32px;">
+
+      <div>
+        <div style="width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;">
+         
+<img
+  src="hoodie-procrastinator-hell.png"
+  alt="The Procrastinator Hoodie"
+  onclick="openMerchImage(this.src, this.alt)"
+  style="display:block;width:90%;height:90%;object-fit:contain;border-radius:10px;cursor:zoom-in;"
+>
+</div>
+<h3>The Procrastinator</h3>
+<p>Coming Soon</p>
+</div>
+
+<div>
+  <div style="width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;">
+    <img
+      src="hoodie-neon.png"
+      alt="Cheap Dopamine Neon Hoodie"
+      onclick="openMerchImage(this.src, this.alt)"
+      style="display:block;width:100%;height:100%;object-fit:contain;border-radius:10px;cursor:zoom-in;"
+    >
+  </div>
+  <h3>Cheap Dopamine – Neon</h3>
+  <p>Coming Soon</p>
+</div>
+
+<div>
+  <div style="width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;">
+    <img
+      src="hoodie-white.png"
+      alt="Cheap Dopamine White Hoodie"
+      onclick="openMerchImage(this.src, this.alt)"
+      style="display:block;width:100%;height:100%;object-fit:contain;border-radius:10px;cursor:zoom-in;"
+    >
+  </div>
+  <h3>Cheap Dopamine – White</h3>
+  <p>Coming Soon</p>
+</div>
+
+<div>
+  <div style="width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;">
+    <img
+      src="hoodie-yellow.png"
+      alt="Cheap Dopamine Yellow Hoodie"
+      onclick="openMerchImage(this.src, this.alt)"
+      style="display:block;width:100%;height:100%;object-fit:contain;border-radius:10px;cursor:zoom-in;"
+    >
+  </div>
+  <h3>Cheap Dopamine – Yellow</h3>
+  <p>Coming Soon</p>
+</div>
+
+
+    </div>
+  </div>
+</section>
+<section id="epk" class="light"><div class="wrap"><div class="eyebrow">04 / EPK</div><h2>Electronic Press Kit.</h2><p data-de="Pressefotos, Biografie, Bühnenanforderungen und technische Informationen folgen nach Freigabe." data-en="Press photos, biography, stage requirements and technical information will be added after approval.">Pressefotos, Biografie, Bühnenanforderungen und technische Informationen folgen nach Freigabe.</p><img class="wide-img" src="jacob-medrea-ted_001.jpg" alt="Jacob Medrea – TEDx Referenz" style="max-width:620px"><p class="placeholder">[Pressebilder, Tech Rider und freigegebene Referenzen ergänzen]</p></div></section><footer><a href="https://www.instagram.com/medreamusic/">Instagram</a> · <a href="https://www.youtube.com/@JacobMedrea">YouTube</a> · <a href="https://www.tiktok.com/@medreamusic">TikTok</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a><p>Testversion – Bildrechte, Booking-Kontakt und rechtliche Angaben vor dem offiziellen Launch prüfen.</p></footer><script>let en=false;document.getElementById('lang').onclick=()=>{en=!en;document.documentElement.lang=en?'en':'de';document.querySelectorAll('[data-de]').forEach(e=>e.textContent=e.dataset[en?'en':'de']);document.getElementById('lang').textContent=en?'DE':'EN'}</script>
+<div id="merchLightbox"
+     onclick="closeMerchImage()"
+     style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);align-items:center;justify-content:center;padding:20px;box-sizing:border-box;">
+
+  <button type="button"
+          onclick="closeMerchImage()"
+          aria-label="Bild schließen"
+          style="position:absolute;top:15px;right:20px;background:transparent;border:0;color:white;font-size:36px;cursor:pointer;">
+    &times;
+  </button>
+
+  <img id="merchLightboxImage"
+       alt=""
+       onclick="event.stopPropagation()"
+       style="max-width:95%;max-height:90vh;object-fit:contain;border-radius:10px;">
+</div>
+
+<script>
+function openMerchImage(src, alt) {
+  document.getElementById('merchLightboxImage').src = src;
+  document.getElementById('merchLightboxImage').alt = alt;
+  document.getElementById('merchLightbox').style.display = 'flex';
+}
+
+function closeMerchImage() {
+  document.getElementById('merchLightbox').style.display = 'none';
+}
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') closeMerchImage();
+});
+</script>
+</body></html>
