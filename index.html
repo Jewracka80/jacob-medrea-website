@@ -326,12 +326,27 @@ nav .epk-nav{
     display: flex;
   }
 
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
   nav .socials-menu {
+    order: 98;
+  }
+
+  nav::after {
+    content: "";
+    flex-basis: 100%;
+    height: 0;
     order: 99;
   }
 
   nav #lang {
-    order: 98;
+    order: 100;
+    margin-left: auto;
   }
 }
 </style></head><body><header>
@@ -340,22 +355,26 @@ nav .epk-nav{
 <nav>
   <a href="#music">About</a>
   <a href="#live">Live Shows</a>
-  <a href="#booking">Booking</a>
+  <a href="#listen">Music</a>
+<a href="#booking">Booking</a>
   <a href="#merch">Merch</a>
   <a href="#newsletter">Newsletter</a>
 
   <details class="socials-menu">
     <summary>Socials <span aria-hidden="true">▾</span></summary>
     <div class="socials-dropdown">
-      <a href="https://www.instagram.com/medreamusic/"
-         target="_blank" rel="noopener noreferrer">Instagram</a>
+  <a href="https://www.instagram.com/medreamusic/"
+     target="_blank" rel="noopener noreferrer">Instagram</a>
 
-      <a href="https://www.youtube.com/@JacobMedrea"
-         target="_blank" rel="noopener noreferrer">YouTube</a>
+  <a href="https://www.youtube.com/@JacobMedrea"
+     target="_blank" rel="noopener noreferrer">YouTube</a>
 
-      <a href="https://www.tiktok.com/@medreamusic"
-         target="_blank" rel="noopener noreferrer">TikTok</a>
-    </div>
+  <a href="https://www.tiktok.com/@medreamusic"
+     target="_blank" rel="noopener noreferrer">TikTok</a>
+
+  <a href="https://soundcloud.com/jacobmedrea"
+     target="_blank" rel="noopener noreferrer">SoundCloud</a>
+</div>
   </details>
 
   <a href="#epk" class="epk-nav">EPK</a>
@@ -494,7 +513,23 @@ nav .epk-nav{
 
 
 
+<section id="listen" style="background:#000;">
+  <div class="wrap" style="padding-top:45px;padding-bottom:45px;">
+    <div class="eyebrow">03 / MUSIC</div>
 
+    <iframe
+      title="Jacob Medrea – SoundCloud"
+      width="100%"
+      height="450"
+      scrolling="no"
+      frameborder="0"
+      loading="lazy"
+      style="display:block;border:0;border-radius:12px;margin:24px 0;"
+      src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Fjacobmedrea&amp;color=%23FF2F32&amp;auto_play=false&amp;visual=false">
+    </iframe>
+
+  </div>
+</section>
 
 <section id="booking" class="wrap">
  
